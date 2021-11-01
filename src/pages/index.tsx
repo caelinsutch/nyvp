@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageWrapper } from '../Components';
+import { ContactSection, Footer, PageWrapper } from '../Components';
 import { HomeBanner, HomeMission, HomeQAndA, HomeTeam } from '../PageComponents';
 
 const HomePage: React.FC = () => (
@@ -8,6 +8,8 @@ const HomePage: React.FC = () => (
     <HomeMission />
     <HomeTeam />
     <HomeQAndA />
+    <ContactSection />
+    <Footer />
   </PageWrapper>
 );
 
