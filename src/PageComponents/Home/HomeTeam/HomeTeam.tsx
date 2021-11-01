@@ -1,11 +1,10 @@
 import React from 'react';
-import { Box, Heading, Text } from '@chakra-ui/react';
-import { StaticImage } from 'gatsby-plugin-image';
-import PersonSection from './Components/PersonSection/PersonSection';
+import { Box, Heading } from '@chakra-ui/react';
+import { PersonSection } from './Components';
 import { graphql, useStaticQuery } from 'gatsby';
 
 const HomeTeam: React.FC = () => {
-  const data = useStaticQuery(
+  const { brian, trace } = useStaticQuery(
     graphql`
       query Photos {
         brian: imageSharp(fluid: { originalName: { eq: "brian.png" } }) {
@@ -17,8 +16,6 @@ const HomeTeam: React.FC = () => {
       }
     `,
   );
-
-  console.log(data);
 
   return (
     <Box minH="100vh" py={16}>
@@ -32,7 +29,7 @@ const HomeTeam: React.FC = () => {
             pioneers of science and technology strategic communications, he founded Technology Solutions, Inc. with his
             wife in 1983. Currently, he is the chairman of the New York Angels. He is author of the book, “What Every
             Angel Investor Wants You to Know.”"
-        image={data.brian.gatsbyImageData}
+        image={brian.gatsbyImageData}
         color="yellow.300"
       />
       <PersonSection
@@ -42,7 +39,7 @@ const HomeTeam: React.FC = () => {
         bio="Trace Cohen is currently pursuing an MBA at Columbia Business School and is a serial entrepreneur in NYC and
             founder of three companies - SPOT (app), Launch.it and Brandyourself.com. He graduated from the Martin J.
             Whitman School of Management at Syracuse University with a double major in Entrepreneurship and Marketing."
-        image={data.trace.gatsbyImageData}
+        image={trace.gatsbyImageData}
         color="orange.300"
       />
     </Box>

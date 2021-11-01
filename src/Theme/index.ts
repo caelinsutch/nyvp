@@ -5,6 +5,13 @@ const theme = extendTheme({
     heading: 'Akrobat',
     body: 'Akrobat',
   },
+  components: {
+    Container: {
+      baseStyle: {
+        maxWidth: '1400px',
+      },
+    },
+  },
 });
 
 export default theme;
