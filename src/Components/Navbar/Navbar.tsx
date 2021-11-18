@@ -22,7 +22,7 @@ const navbarLinks = [
 ];
 
 const Navbar: React.FC = () => (
-  <Flex direction="row" as="header" p={4} alignItems="center">
+  <Flex direction="row" as="header" p={4} alignItems="center" position="absolute" w="100vw">
     <Box>
       <StaticImage src="../../Images/nyvp-logo.png" alt="NYVP Logo" height={60} />
     </Box>

@@ -16,6 +16,14 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `nld5aq0leinr`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: 'Rc8kvA9ZBka2qJQ0rQwEgvMfLfXzrK1rfbn7VOteGKk',
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
