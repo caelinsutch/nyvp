@@ -5,8 +5,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 const HomeTeam: React.FC = () => {
   const {
-    brian,
-    trace,
     contentfulHomePage: { teamMembers },
   } = useStaticQuery(
     graphql`
@@ -22,12 +20,6 @@ const HomeTeam: React.FC = () => {
               gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
             }
           }
-        }
-        brian: imageSharp(fluid: { originalName: { eq: "brian.png" } }) {
-          gatsbyImageData(quality: 100)
-        }
-        trace: imageSharp(fluid: { originalName: { eq: "trace.png" } }) {
-          gatsbyImageData(quality: 100)
         }
       }
     `,
