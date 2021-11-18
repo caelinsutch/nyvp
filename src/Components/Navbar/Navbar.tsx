@@ -1,23 +1,24 @@
 import React from 'react';
+import { Link as GatsbyLink } from 'gatsby';
 import { Box, Link, Flex, Spacer, Text } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const navbarLinks = [
   {
     title: 'Mission',
-    link: '#mission',
+    link: '/#mission',
   },
   {
     title: 'Portfolio',
-    link: '#portfolio',
+    link: '/#portfolio',
   },
   {
     title: 'Team',
-    link: '#team',
+    link: '/#team',
   },
   {
     title: 'Contact',
-    link: '#contact',
+    link: '/contact',
   },
 ];
 
@@ -29,7 +30,7 @@ const Navbar: React.FC = () => (
     <Spacer />
     <Flex direction="row" as="nav">
       {navbarLinks.map(({ title, link }) => (
-        <Link href={link} px={8} key={title + link}>
+        <Link to={link} px={8} key={title + link} as={GatsbyLink}>
           <Text fontSize="large" textTransform="uppercase" fontWeight="semibold">
             {title}
           </Text>
